@@ -13,6 +13,12 @@ cask "mdmini" do
   app "md-mini.app"
   binary "#{appdir}/md-mini.app/Contents/Resources/bin/mdmini", target: "mdmini"
 
+  # Remove quarantine for unsigned app (custom tap only — official cask doesn't allow this)
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-dr", "com.apple.quarantine", "#{appdir}/md-mini.app"]
+  end
+
   uninstall quit: "com.md-mini.app"
 
   zap trash: [
