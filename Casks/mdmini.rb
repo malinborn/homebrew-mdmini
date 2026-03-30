@@ -1,17 +1,14 @@
 cask "mdmini" do
   version "0.1.0"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_aarch64.dmg"
-    sha256 "REPLACE_WITH_AARCH64_SHA256"
-  else
-    url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_x64.dmg"
-    sha256 "REPLACE_WITH_X64_SHA256"
-  end
+  url "https://github.com/malinborn/mdmini/releases/download/v#{version}/mdmini_#{version}_aarch64.dmg"
+  sha256 "32e3a42658c87324f9006d617b8decc533f673c1bd65e98a956bf9f534a11e4a"
 
   name "mdmini"
   desc "Minimalist live-preview markdown editor for macOS"
   homepage "https://github.com/malinborn/mdmini"
+
+  depends_on arch: :arm64
 
   app "md-mini.app"
 
