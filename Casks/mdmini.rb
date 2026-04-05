@@ -1,8 +1,8 @@
 cask "mdmini" do
-  version "0.1.6"
+  version "0.2.0"
 
   url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_aarch64.dmg"
-  sha256 "9460e739db89c90596be604f4679c5a91f71d3e31fa2ffa9f8968e443c33cff9"
+  sha256 "f3db453c536f98ef4ce77036aa7e4f6dd6cecca3acbd275af799687c48f4a6f4"
 
   name "mdmini"
   desc "Minimalist live-preview markdown editor for macOS"
