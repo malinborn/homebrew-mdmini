@@ -1,8 +1,8 @@
 cask "mdmini" do
-  version "0.4.0"
+  version "0.5.0"
 
   url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_aarch64.dmg"
-  sha256 "d6456b359c1a793d6228d04cb5c6804121bbfffb4f0ddf9af708d78ce4cfa94c"
+  sha256 "5405f20da152118a1558fef1352678d9acb32c2ffcb24b6e40465cbb37de1f9e"
 
   name "mdmini"
   desc "Minimalist live-preview markdown editor for macOS"
@@ -22,6 +22,7 @@ cask "mdmini" do
   uninstall quit: "com.md-mini.app"
 
   zap trash: [
+    "~/Library/Application Support/md-mini",
     "~/Library/Application Support/com.md-mini.app",
     "~/Library/Caches/com.md-mini.app",
     "~/Library/Preferences/com.md-mini.app.plist",
