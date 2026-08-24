@@ -1,10 +1,10 @@
 cask "mdmini" do
-  version "1.0.1"
+  version "1.1.0"
 
   # Universal build (Apple Silicon + Intel) since 1.0.1 — one file for both
   # architectures, so no `depends_on arch:` and no Hardware::CPU.arm? branch.
   url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_universal.dmg"
-  sha256 "26670aa2e99e3b193582927478fce55d05238dd41c74adbcb8c47c74a3fe7425"
+  sha256 "d1d83f6d86900f4fa3585d5a0900c62a0c4ecfaaddb74f79c43080705ff2c398"
 
   name "mdmini"
   desc "Minimalist live-preview markdown editor for macOS"
