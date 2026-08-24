@@ -1,14 +1,14 @@
 cask "mdmini" do
-  version "1.0.0"
+  version "1.0.1"
 
-  url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_aarch64.dmg"
-  sha256 "e20855e87f8196bc26b1fe68a9d6640d8d5c56fe526226aebdcdd6f1d5d7eb7e"
+  # Universal build (Apple Silicon + Intel) since 1.0.1 — one file for both
+  # architectures, so no `depends_on arch:` and no Hardware::CPU.arm? branch.
+  url "https://github.com/malinborn/mdmini/releases/download/v#{version}/md-mini_#{version}_universal.dmg"
+  sha256 "26670aa2e99e3b193582927478fce55d05238dd41c74adbcb8c47c74a3fe7425"
 
   name "mdmini"
   desc "Minimalist live-preview markdown editor for macOS"
   homepage "https://github.com/malinborn/mdmini"
-
-  depends_on arch: :arm64
 
   app "md-mini.app"
   binary "#{appdir}/md-mini.app/Contents/Resources/bin/mdmini", target: "mdmini"
