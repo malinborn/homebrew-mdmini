@@ -1,10 +1,10 @@
 cask "couplet" do
-  version "2.1.0"
+  version "2.1.1"
 
   # Universal build (Apple Silicon + Intel) — one file for both architectures,
   # so no `depends_on arch:` and no Hardware::CPU.arm? branch.
   url "https://github.com/malinborn/couplet/releases/download/v#{version}/couplet_#{version}_universal.dmg"
-  sha256 "4993971f7bf0969998a90426dd9c9f5009689c7be5312c7b6332919fc8e040f8"
+  sha256 "cb9e742141a6907791d854cd82d4ba329bb2cb385d7e7bde67df273f0e775411"
 
   name "couplet"
   desc "Markdown editor you and your AI agent work in together"
